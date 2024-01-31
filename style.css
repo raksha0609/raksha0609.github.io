@@ -1,40 +1,88 @@
 /* spacing on all sections */
+body {
+    font-family: 'Arial', sans-serif; /* Update font-family for better readability */
+    background-color: #c3bba1 /* Change the background color to a light shade */
+}
 .section {
-    margin-top: 4rem;
-    padding-top: 4rem;
+    margin-top: 2rem; /* Reduced margin-top */
+    padding-top: 2rem;
 }
 .section:last-of-type {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem; /* Reduced padding-bottom */
 }
     
 /* hero background image */
 .bgimage {
-    height:100vh;
-    background: url('about.jpeg');
-    background-size:cover;
-    position:relative;
-    padding: 0;
-    margin: 0;
+    height: 80vh; /* Adjusted height to 60% of the viewport height */
+    width: auto; /* Set width to auto to maintain aspect ratio */
+    background: url('me.jpg');
+    background-size: contain; /* Updated to 'contain' for square fit */
+    background-position: right; /* Align image to the right top corner */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    position: relative;
+    padding-top: 22vh;
+    padding-bottom: 22vh;
+    left: -7%;
+    margin: 50px 0;
+    border-radius: 5px;
 }
+
 /* text css above hero image*/
 .hero_title {
-    padding-top: 10rem;
+    padding-top: 5rem; /* Adjusted padding-top for better visibility */
     font-size: 3rem;
-	text-align:left;
-	font-family:lucida calligraphy;
-	color:#AA4A44;
-	animation: text 2s 1;
+    text-align: center;
+    font-family: 'Lucida Calligraphy', cursive; /* Use single quotes for font names with spaces */
+    color: #24344d; /* Updated font color */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowed text */
+    animation: fancyText 2s 1; /* Added a new animation 'fancyText' */
 }
 hr {
-			
-            position: relative;         
-            height: 12px;
-            background: #AA4A44;
-            
-        }
+    position: relative;
+    display: block;
+    height: 2px; /* Set the height to make it a thin line */
+    margin: 10px auto;
+    width: 1000px; /* Changed to positive value */
+    background: black;
+    animation: bounceAndShrink 2s ease-in-out infinite;
+}
+
+@keyframes bounceAndShrink {
+    0%, 100% {
+        transform: scaleX(1); /* Initial and final scale */
+    }
+
+    50% {
+        transform: scaleX(0.5); /* Decrease in size */
+    }
+
+    60% {
+        transform: scaleX(1); /* Bouncing effect */
+    }
+
+    70% {
+        transform: scaleX(0.8); /* Slight decrease in size */
+    }
+}
+@keyframes bounceAndGrow {
+    0%, 20%, 50%, 80%, 100% {
+        transform: scaleY(1); /* Initial and final scale */
+    }
+
+    40% {
+        transform: scaleY(1.5); /* Increase in size */
+    }
+
+    60% {
+        transform: scaleY(0.8); /* Bouncing effect */
+    }
+}
+
 @keyframes text {
             0% {
                 color: black;
+                height: 2px;
                 margin-bottom: -40px;
             }
  
@@ -45,44 +93,73 @@ hr {
  
             85% {
                 letter-spacing: 8px;
+                height: 12px;
                 margin-bottom: -40px;
             }
         }
-.hero_desc {
-    font-size: 1.5rem;
-	text-align:left;
-	font-family:lucida calligraphy;
-	color:#AA4A44;
-	animation: fadeInOpacity 10s 1;
+@keyframes fancyText {
+    from {
+        transform: translateX(-100%); /* Move from left to right */
+    }
+    to {
+        transform: translateX(0); /* Move to the original position */
+    }
 }
 
-@keyframes fadeInOpacity {
+.hero_desc {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Lucida Calligraphy', cursive;
+    color: #3e567c;
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(20px); /* Move down initially */
+    animation: slideInUp 1.5s forwards; /* Use slideInUp animation for 1.5 seconds */
+}
+
+@keyframes slideInUp {
     0% {
         opacity: 0;
+        transform: translateY(20px); /* Move down initially */
     }
     100% {
         opacity: 1;
+        transform: translateY(0); /* Move up to the original position */
     }
+}
+
+span{
+    color: #B7b428;
+    
 }
 
 
 .downloadbtn {
-  background-color:#D0E8F2;
-  color:black;
-  font-family:georgia;
-  border-radius: 12px;
-   padding: 10px 25px;
-  font-size:23px;
-  position: absolute;
-  
- 
+    background-color:#6b8c8e;
+    color: white;
+    align-items: center;
+    font-family: 'Georgia', serif;
+    border-radius: 255px;
+    padding: 3px 25px;
+    font-size: 24px;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    /* Center the button using Bootstrap utility classes */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.downloadbtn:hover {
+    background-color: #6b8c8e;
 }
 .hero_text {
-    text-align: center;
+    text-align: center; /* Adjusted alignment */
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    right: 10%; /* Adjusted right alignment */
+    transform: translate(0, -60%);
     color: white;
 }
 
@@ -95,7 +172,7 @@ hr {
 }
 
 .navbarDark {
-    background: #DAEEC9;
+    background:#6b8c8e;
 }
 
 
@@ -108,7 +185,7 @@ hr {
 .fa-twitter:hover,
 .fa-linkedin:hover, 
 .fa-twitch:hover {
-    color: #fff;
+    color: #82c0cc;
 }
 .fab {
     color: #000000;
@@ -128,9 +205,8 @@ hr {
 }
 
 .card:hover .servicesIcon {
-    color: #008000;
+    color: brown;
 }
 .servicesText:hover {
-    border: 1px solid #008000;
+    border: 1px solid black;
 }
-
