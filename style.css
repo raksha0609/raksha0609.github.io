@@ -1,307 +1,214 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Portfolio Website-Brad</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
-  <!-- linking css file -->
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <!-- navbar -->
-    <!-- https://getbootstrap.com/docs/5.2/components/navbar/ -->   
-    <!-- Add class of bg-light to nav element -->
-    <nav class="navbar navbar-expand-lg fixed-top navbarScroll navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" style="color:#3a1730; " href="#"><b>Raksha Shivamogga Gopalakrishna</b></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                      <b>  <a class="nav-link" style="color:black; " href="#home">HOME</a> </b>
-                    </li>
-                    <li class="nav-item">
-                       <b> <a class="nav-link" style="color:black;" href="#about">ABOUT</a> </b>
-                    </li>
-                    <li class="nav-item">
-                      <b>  <a class="nav-link" style="color: black; " href="#services">PROJECTS</a> </b>
-                    </li>
-                    <li class="nav-item">
-                      <b>  <a class="nav-link" style="color:black; ;" href="#portfolio">RESUME</a> </b>
-                    </li>
-                    <li class="nav-item">
-                       <b> <a class="nav-link" style="color:black; " href="#contact">CONTACT</a> </b>
-                    </li>
-                </ul>
-                
-            </div>
-        </div>
-    </nav>
+/* spacing on all sections */
+body {
+    font-family: 'Arial', sans-serif; /* Update font-family for better readability */
+    background-color: #bebebe /* Change the background color to a light shade */
+}
+.section {
+    margin-top: 2rem; /* Reduced margin-top */
+    padding-top: 2rem;
+}
+.section:last-of-type {
+    padding-bottom: 2rem; /* Reduced padding-bottom */
+}
     
-    <!-- main banner -->
-    <!-- https://getbootstrap.com/docs/5.2/layout/containers/ -->
-    <!-- https://getbootstrap.com/docs/5.2/layout/grid/ -->
-    <section class="container-fluid section bgimage" id="home">
-	
-        <div class="row">
-		 
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero_text">
-                <h2 class="hero_title"><b>Hi, it's me <span>Raksha</span><br><hr style="width:35%" /></b></h2>
-               <p class="hero_desc"><i><b>Master's student specializing in <br> Artificial Intelligence and
-				Data Science</b></i></p>
-				
-				
-            </div>
-        </div>
-    </section>
-    
-    <!-- about section -->
-	
-    <section class="container mt-4 pt-4 section" id="about">
-        <h1 class="text-center" style="color: #24344d">ABOUT ME</h1>
-        
-        <div class="row mt-4">
-            <div class="col-lg-6">
-                <img src="about.jpeg" class="image_about" alt="">
-            </div>
+/* hero background image */
+.bgimage {
+    height: 80vh; /* Adjusted height to 60% of the viewport height */
+    width: auto; /* Set width to auto to maintain aspect ratio */
+    background: url('me.jpg');
+    background-size: contain; /* Updated to 'contain' for square fit */
+    background-position: right; /* Align image to the right top corner */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    position: relative;
+    padding-top: 22vh;
+    padding-bottom: 22vh;
+    left: -7%;
+    margin: 50px 0;
+    border-radius: 5px;
+}
 
-            <div class="col-lg-6" style="font-family:georgia">
-			<p>
-			<p><p>
-			<b>
-			Hello,
-			</p>
-                <p> <b>I am Raksha Gopalakrishna, a Master's student specializing in Artificial Intelligence and
-				Data Science. 
-				<p>
-				Explore my official portfolio website to discover details about my academic journey, 
-				skills, and work experience. Please visit the About and Resume page to learn more about me and for 
-				a closer look at the work I have done.  
-				</p>
-				
-				<p>
-				Currently, I am actively seeking internship opportunities to 
-				apply and enhance my skills in the dynamic field of Artificial Intelligence and Data Science.
-				</p>
-			<p>
-				Thank you for taking the time to visit my page! </b>
-             </p>
-				<!--
-                <div class="row mt-3">
-                    <div class="col-md-6">
-                        <ul>
-                            <li>Windsurfing</li>
-                            <li>Mountain-climbing</li>
-                            <li>Brain-surgery</li>
+/* text css above hero image*/
+.hero_title {
+    padding-top: 5rem; /* Adjusted padding-top for better visibility */
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Lucida Calligraphy', cursive; /* Use single quotes for font names with spaces */
+    color: #24344d; /* Updated font color */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowed text */
+    animation: fancyText 2s 1; /* Added a new animation 'fancyText' */
+}
+hr {
+    position: relative;
+    display: block;
+    height: 2px; /* Set the height to make it a thin line */
+    margin: 10px auto;
+    width: 1000px; /* Changed to positive value */
+    background: black;
+    animation: bounceAndShrink 2s ease-in-out infinite;
+}
 
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul>
-                            <li>Creative-writing</li>
-                            <li>Gymnastics</li>
-                            <li>Landscape painting</li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                    </p>
-                </div> -->
-            </div>
-        </div>
-		
-    </section>
-    
-    <!-- services section-->
-    <!-- https://getbootstrap.com/docs/5.2/components/card/#about -->
-    <section class="container section" id="services">
-        <h1 class="text-center" style="color: #24344d ">PROJECTS</h1>
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <a href="https://drive.google.com/file/d/1Ej-AqZ_ge-f0vMCitPmhTAEd4jFhlc5x/view">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class="fas servicesIcon fa-clock"></i> 
-                                           
-                        <h4 class="card-title mt-3">Face Detection</h4>
-                    </a>    
-                    
-                        <p class="card-text mt-3">This project gives an ideal way of detecting human faces using OpenCV, and
-                            python. The proposed system helps in detecting the human face in the given
-                            image. That can be used in various platforms and mobile applications.
-                    </div>
-                </div> 
-            </div>
-            <div class="col-lg-4 mt-4">
-                <a href="https://drive.google.com/file/d/12mlbGwi7oQXrOXWRqLBkv8oPHTmYvvBs/view">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class='fas servicesIcon fa-layer-group'>
-                    
-                        </i>
-                        <h4 class="card-title mt-3">Web Development</h4>
-                    </a>
-                        <p class="card-text mt-3">Web development is the process of creating and maintaining websites or web applications. 
-                            It involves a combination of programming, design, and multimedia elements to deliver a seamless and interactive online experience. 
-                        </p>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="col-lg-4 mt-4">
-                <a href="https://drive.google.com/file/d/14tR1XGXYPtA86864Xj2OXy17GQE8MoAU/view">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class='far servicesIcon fa-check-circle'></i>
-                        <h4 class="card-title mt-3">IOT Application</h4>
-                    </a>
-                        <p class="card-text mt-3">This project aims to leverage interconnected devices to detect the degree of danger in a given
-                             environment and promptly alert users, ensuring swift responses to potential threats.
-                        </p>
-                    </div>
-                </div>  
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <a href="https://drive.google.com/file/d/1wUpg1NU_6qAxMlweHJ3mGe2H0sxpoDG3/view">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class='fas servicesIcon fa-search'></i>
-                        <h4 class="card-title mt-3">Network Security</h4>
-                    </a>
-                        <p class="card-text mt-3">This project provide security while transferring data. Cryptography is used in
-                            this project to provide confidentiality of the information. Experiments in this project uses python for message encryption and
-                            message transfer.
-                        </p>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="col-lg-4 mt-4">
-                <a href="https://drive.google.com/file/d/1JsBA4sjd40bsB4OQQ1CuFcpz15zJeIly/view?usp=sharing">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class='fas servicesIcon fa-shield-alt'></i>
-                        <h4 class="card-title mt-3">Certifications</h4>
-                    </a>
-                        <p class="card-text mt-3">Certified in Python for Machine Learning, demonstrating proficiency in data handling of
-                             machine learning workflows. Skilled in TensorFlow and Keras, showcasing the ability to develop machine learning models.
-                        </p>
-                    </div>
-                </div>  
-            </div>
-
-           <div class="col-lg-4 mt-4">
-            <a href="https://drive.google.com/file/d/1SHM8djUFnKFfDgK9yuAPfWhxiQHkkNBm/view?usp=sharing">
-                <div class="card servicesText">
-                    <div class="card-body">
-                        <i class='fas servicesIcon fa-wrench'></i>
-                        <h4 class="card-title mt-3">Seminars</h4>
-                    </a>
-                        <p class="card-text mt-3">Delivered seminars on advanced image enhancement techniques. Explored methodologies to 
-                            greatly enhance visual effects.
-                             Additionally, organized sessions on Cryptography and Security. 
-                        </p>
-                    </div>
-                </div>  
-            </div> 
-        </div>
-    </section>
-
-    <!-- portfolio section-->
-    <section class="section" id="portfolio">
-        <div class="container mt-3">
-            <h1 class="text-center" style="color:#24344d ">CHECK OUT MY RESUME</h1>
-			<br/>
-			
-			<button type="button" class="downloadbtn"> <a href="https://drive.google.com/file/d/19oeH4upcx1QhkQnh_PozFq-wlqHnKqwF/view" class="downloadbtn" download><b>Download CV</b></a></button>
-			
-			
-            </div>
-    </section>
-    
-    <!-- contact section-->
-    <!-- https://getbootstrap.com/docs/5.2/forms/overview -->
-    <section class="container mt-3 section" id="contact">
-	<br/>
-        <h1 class="text-center" style="color:#24344d">Contact Me</h1>
-
-        <div class="row mt-4">
-            <div class="col-lg-6">
-                <!-- to edit google map go to https://www.embed-map.com type your location, generate html code and copy the html  -->
-                <div style="overflow:hidden;max-width:100%;width:500px;height:500px;">
-				<div id="g-mapdisplay" style="height:100%; width:100%;max-width:100%;">
-				<iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Deggendorf+Institute+of+Technology,+Dieter-Görlitz-Platz,+Deggendorf,+Germany&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
-				</iframe>
-				</div>
-				<a class="googlemaps-made" href="https://kbj9qpmy.com/bp" id="get-map-data">Internet Provider</a>
-				<style>#g-mapdisplay img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style>
-				</div>
-            </div>
-
-            <div class="col-lg-6">
-                <!-- form fields -->
-                <form onsubmit="sendEmail(); reset(); return false;">
-                    <input type="text" class="form-control mt-3" placeholder="Name">
-                    <input type="email" class="form-control mt-3" placeholder="Email">
-                    <input type="text" class="form-control mt-3" placeholder="Subject">
-                    <div class="mb-3 mt-3">
-                        <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Message"></textarea>
-                    </div>
-                </form>
-                <button type="button" class="btn btn-success mt-3">Contact Me</button>
-            </div>
-        </div>
-        
-    </section>
-    
-    <!-- footer section-->
-    <footer class="container-fluid footer" id="footer">
-        <!-- social media icons -->
-       <!-- <div class="social-icons mt-4">
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
-        </div> -->
-    </footer>
-    
-
-    <!-- load javascript after loading all html content -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function sendEmail() {
-      Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "sgraksha1@gmail.com",
-        Password: "B5E98651DDB7A9DC5738A80B0DAE0D4F1095",
-        To: 'elsaa8395@gmail.com',
-        From: document.getElementById("email").value,
-        Subject: "New contact form enquiry",
-        Body: "And this is the body"
-      }).then(
-        message => alert(message)
-      );
+@keyframes bounceAndShrink {
+    0%, 100% {
+        transform: scaleX(1); /* Initial and final scale */
     }
-    
-    function reset() {
-      // Add logic to reset form fields if needed
-      console.log("Form reset logic here");
+
+    50% {
+        transform: scaleX(0.5); /* Decrease in size */
     }
-  </script>
-</body>
-</html>
+
+    60% {
+        transform: scaleX(1); /* Bouncing effect */
+    }
+
+    70% {
+        transform: scaleX(0.8); /* Slight decrease in size */
+    }
+}
+@keyframes bounceAndGrow {
+    0%, 20%, 50%, 80%, 100% {
+        transform: scaleY(1); /* Initial and final scale */
+    }
+
+    40% {
+        transform: scaleY(1.5); /* Increase in size */
+    }
+
+    60% {
+        transform: scaleY(0.8); /* Bouncing effect */
+    }
+}
+
+@keyframes text {
+            0% {
+                color: black;
+                height: 2px;
+                margin-bottom: -40px;
+            }
+ 
+            30% {
+                letter-spacing: 10px;
+                margin-bottom: -40px;
+            }
+ 
+            85% {
+                letter-spacing: 8px;
+                height: 12px;
+                margin-bottom: -40px;
+            }
+        }
+@keyframes fancyText {
+    from {
+        transform: translateX(-100%); /* Move from left to right */
+    }
+    to {
+        transform: translateX(0); /* Move to the original position */
+    }
+}
+
+.hero_desc {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Lucida Calligraphy', cursive;
+    color: #3e567c;
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(20px); /* Move down initially */
+    animation: slideInUp 1.5s forwards; /* Use slideInUp animation for 1.5 seconds */
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Move down initially */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move up to the original position */
+    }
+}
+
+span{
+    color: #8F5B54;
+    transition: transform 0.3s ease;
+    
+}
+
+
+.downloadbtn {
+    background-color:#6b8c8e;
+    color: white;
+    align-items: center;
+    font-family: 'Georgia', serif;
+    border-radius: 255px;
+    padding: 3px 25px;
+    font-size: 24px;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    /* Center the button using Bootstrap utility classes */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.downloadbtn:hover {
+    background-color: #6b8c8e;
+}
+.hero_text {
+    text-align: center; /* Adjusted alignment */
+    position: absolute;
+    top: 50%;
+    right: 10%; /* Adjusted right alignment */
+    transform: translate(0, -60%);
+    color: white;
+    
+}
+
+
+
+
+
+.image_about {
+    width: 100%;
+}
+
+.navbarDark {
+    background:#6b8c8e;
+}
+
+
+ .social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-linkedin:hover, 
+.fa-twitch:hover {
+    color: #82c0cc;
+}
+.fab {
+    color: #000000;
+}
+
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+  }
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+
+.card:hover .servicesIcon {
+    color: brown;
+}
+.servicesText:hover {
+    border: 1px solid black;
+}
