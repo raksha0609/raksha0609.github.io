@@ -284,6 +284,10 @@
     <!-- load javascript after loading all html content -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
+	  document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        sendEmail(); // Call sendEmail function
+    });
     function sendEmail() {
       Email.send({
         Host: "smtp.elasticemail.com",
@@ -294,14 +298,12 @@
         Subject: "New contact form enquiry",
         Body: "And this is the body"
       }).then(
-        message => alert(message)
-      );
+         function(message) {
+                document.getElementById('status').innerHTML = '<div class="alert alert-success">Message Sent!</div>';
+                document.getElementById('contact-form').reset();
+            }
+        );
     }
-    
-    function reset() {
-      // Add logic to reset form fields if needed
-      console.log("Form reset logic here");
-    }
-  </script>
+</script>
 </body>
 </html>
