@@ -1,7 +1,7 @@
 /* spacing on all sections */
 body {
     font-family: 'Arial', sans-serif; /* Update font-family for better readability */
-    background-image: url('Bck.jpg');/* Change the background color to a light shade */
+    background-image: url('BCK1.jpg');/* Change the background color to a light shade */
 }
 .section {
     margin-top: 2rem; /* Reduced margin-top */
